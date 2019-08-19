@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_root_CL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.details.DetailsActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/details_poster_IV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/colorPrimary"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/details_error_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="error"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/details_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/details_card_CV"
+        android:layout_height="150dp"
+        android:layout_width="0dp"
+
+        app:cardCornerRadius="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/details_trailer_IV"
+        android:layout_width="135dp"
+        android:layout_height="190dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+
+        android:elevation="3dp"
+        android:src="@color/colorPrimary"
+
+        app:layout_constraintBottom_toBottomOf="@+id/details_card_CV"
+        app:layout_constraintEnd_toEndOf="@+id/details_card_CV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/details_card_CV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/details_trailer_youtube_icon_IV"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+
+        android:elevation="3dp"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_media_play"
+
+        app:layout_constraintBottom_toBottomOf="@+id/details_trailer_IV"
+        app:layout_constraintEnd_toEndOf="@+id/details_trailer_IV"
+        app:layout_constraintStart_toStartOf="@+id/details_trailer_IV"
+        app:layout_constraintTop_toTopOf="@+id/details_trailer_IV" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/details_save_movie_B"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+
+        android:text="@string/add_to_watch_list"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorAccent"
+        style="@style/Widget.MaterialComponents.Button"
+
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/details_title_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:text="Title"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        app:autoSizeTextType="uniform"
+        app:autoSizeMinTextSize="18sp"
+        app:autoSizeMaxTextSize="26sp"
+        app:autoSizeStepGranularity="2sp"
+        android:textColor="@color/colorPrimary"
+
+        android:elevation="3dp"
+        android:padding="8dp"
+        android:gravity="center_vertical"
+
+        app:layout_constraintBottom_toBottomOf="@+id/details_card_CV"
+        app:layout_constraintEnd_toEndOf="@+id/details_card_CV"
+        app:layout_constraintStart_toEndOf="@+id/details_trailer_IV"
+        app:layout_constraintTop_toTopOf="@+id/details_card_CV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/details_genre_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:elevation="3dp"
+        android:layout_margin="8dp"
+
+        android:text="no genre"
+        android:textSize="14sp"
+        android:fontFamily="serif"
+        app:layout_constraintHorizontal_bias="0"
+
+        app:layout_constraintBottom_toBottomOf="@+id/details_card_CV"
+        app:layout_constraintEnd_toEndOf="@+id/details_card_CV"
+        app:layout_constraintStart_toEndOf="@+id/details_trailer_IV"
+        app:layout_constraintTop_toBottomOf="@+id/details_title_TV"
+        app:layout_constraintVertical_bias="0" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/details_summary_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:elevation="2dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+
+        android:text="summary"
+        android:textSize="14sp"
+        android:textColor="@color/colorAccent"
+
+        app:layout_constraintBottom_toBottomOf="@+id/details_card_CV"
+        app:layout_constraintEnd_toEndOf="@+id/details_card_CV"
+        app:layout_constraintStart_toEndOf="@+id/details_trailer_IV"
+        app:layout_constraintTop_toBottomOf="@+id/details_genre_TV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MovieSearch</string>
+    <string name="add_to_watch_list">add to watch list</string>
+    <string name="remove_from_watch_list">remove from watch list</string>
+    <string name="movie_removed">Movie removed from watch list</string>
+    <string name="movie_added">Movie added to watch list</string>
+    <string name="no_trailer">There is no trailer</string>
+    <string name="movie_search">search for a movie</string>
+</resources>
