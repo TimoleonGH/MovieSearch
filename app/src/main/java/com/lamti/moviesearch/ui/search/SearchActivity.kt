@@ -17,6 +17,7 @@ import com.lamti.moviesearch.data.repository.NetworkState
 import com.lamti.moviesearch.ui.details.DetailsActivity
 import com.lamti.moviesearch.ui.search.watchlist_groupie_item.MovieItem
 import com.lamti.moviesearch.utils.hideKeyboard
+import com.lamti.moviesearch.utils.scaleView
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.ViewHolder
@@ -86,10 +87,13 @@ class SearchActivity : AppCompatActivity(), MovieItem.MovieItemClickListener {
     private fun watchListButtonVisibilityListener() {
         searchMovieViewModel.getWatchList().observe(this, Observer {
             if ( it.isNullOrEmpty() ) {
+                watch_list_B.scaleView(1f, 0f)
                 watch_list_B.visibility = View.GONE
                 showSearchList(true)
-            } else
+            } else {
                 watch_list_B.visibility = View.VISIBLE
+                watch_list_B.scaleView(0f, 1f)
+            }
 
         })
     }

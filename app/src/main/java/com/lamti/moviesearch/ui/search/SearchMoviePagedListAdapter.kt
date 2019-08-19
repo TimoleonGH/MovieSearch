@@ -1,6 +1,5 @@
 package com.lamti.moviesearch.ui.search
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,8 +10,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.lamti.moviesearch.ui.details.DetailsActivity
 import com.lamti.moviesearch.R
-import com.lamti.moviesearch.data.network.Api
 import com.lamti.moviesearch.data.models.ApiModel
+import com.lamti.moviesearch.data.network.Api
 import com.lamti.moviesearch.data.repository.NetworkState
 import com.lamti.moviesearch.utils.loadImage
 import kotlinx.android.synthetic.main.movie_list_item.view.*
@@ -82,7 +81,6 @@ class SearchMoviePagedListAdapter(private val context: Context) :
 
         private var modelType = 0
 
-        @SuppressLint("CheckResult")
         fun bind(movie: ApiModel?, context: Context) {
 
             if (movie?.title != null) {
